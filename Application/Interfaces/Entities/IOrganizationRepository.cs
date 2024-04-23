@@ -5,7 +5,7 @@ namespace Application.Interfaces.Entities;
 
 public interface IOrganizationRepository
 {
-    Task<Organization?> GetByIdAsync(OrganizationId id);
+    Task<Organization?> GetByIdAsync(Guid id);
     Task AddAsync(Organization organization);
     Task UpdateAsync(Organization organization);
 }

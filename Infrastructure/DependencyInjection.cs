@@ -25,6 +25,7 @@ namespace Infrastructure
             services.AddScoped<IOrganizationRepository, OrganizationRepository>();
             services.AddScoped<IPositionRepository, PositionRepository>();
             services.AddScoped<IStaffRepository, StaffRepository>();
+            services.AddScoped<IGroupTitleRepository, GroupTitleRepository>();
 
             return services;
         }

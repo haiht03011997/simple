@@ -1,15 +1,20 @@
-using Domain.Entities.Staffs;
 using MediatR;
 
 namespace Application.Commands.Organizations.Create;
 
 public record UpdateOrganizationCommand(
     Guid OrganizationId,
+    Guid ParentOrganizationId,
     string Name,
-    List<UpdatePositionCommand> CreatePositionCommands) : IRequest;
+    bool? IsSameLegal,
+    List<UpdatePositionCommand> CreatePositionCommands,
+    bool? IsDeleted) : IRequest;
 
 public record UpdatePositionCommand(
     Guid? PositionId,
     string Name,
     string Description,
-    List<Guid> StaffIds) : IRequest;
+    bool? IsManage,
+    Guid GroupTitleId,
+    List<Guid> StaffIds,
+    bool? IsDeleted) : IRequest;

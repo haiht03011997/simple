@@ -9,3 +9,15 @@ D:\VPG_QLKH_Organization.csproj\Contracts\obj\Debug\net8.0\Contracts.dll
 D:\VPG_QLKH_Organization.csproj\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 D:\VPG_QLKH_Organization.csproj\Contracts\obj\Debug\net8.0\Contracts.pdb
 D:\VPG_QLKH_Organization.csproj\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+D:\VPG_QLKH_Organization\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\VPG_QLKH_Organization\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\VPG_QLKH_Organization\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\ref\Contracts.dll

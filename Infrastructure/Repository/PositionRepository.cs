@@ -14,7 +14,7 @@ namespace Infrastructure.Repository
             _context = context;
         }
 
-        public async Task<Position?> GetByIdAsync(PositionId id)
+        public async Task<Position?> GetByIdAsync(Guid id)
         {
             return await _context.Positions
                 .SingleOrDefaultAsync(u => u.Id == id);

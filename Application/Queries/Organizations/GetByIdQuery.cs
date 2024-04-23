@@ -5,6 +5,6 @@ namespace Application.Queries.Organizations
 {
     public class GetByIdQuery : IRequest<Organization>
     {
-        public OrganizationId Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

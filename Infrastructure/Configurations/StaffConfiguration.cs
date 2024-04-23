@@ -9,7 +9,6 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Staff> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasConversion(userId => userId.value, value => new StaffId(value));
             builder.HasIndex(x => x.Email).IsUnique();
         }
     }

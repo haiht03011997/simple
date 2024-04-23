@@ -5,9 +5,13 @@ namespace Application.Commands.Organizations.Create;
 
 public record CreateOrganizationCommand(
     string Name,
-    List<CreatePositionCommand> CreatePositionCommands) : IRequest;
+    Guid? ParentOrganizationId,
+    bool? IsSameLegal,
+    List<CreatePositionCommand>? CreatePositionCommands) : IRequest;
 
 public record CreatePositionCommand(
-    string Name,
-    string Description,
-    List<Guid> StaffIds) : IRequest;
+    string? Name,
+    string? Description,
+    bool? IsManage,
+    Guid GroupTileId,
+    List<Guid>? StaffIds) : IRequest;

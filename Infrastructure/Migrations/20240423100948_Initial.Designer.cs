@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240422084917_Initial")]
+    [Migration("20240423100948_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -25,9 +25,10 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.Organizations.Organization", b =>
+            modelBuilder.Entity("Domain.Entities.GroupTitles.GroupTitle", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedBy")
@@ -51,12 +52,52 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("GroupTitles");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Organizations.Organization", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsSameLegal")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ParentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
                     b.ToTable("Organizations");
                 });
 
             modelBuilder.Entity("Domain.Entities.Positions.Position", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedBy")
@@ -66,10 +107,15 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("GroupTitleId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsManage")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastUpdatedBy")
@@ -86,6 +132,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupTitleId")
+                        .IsUnique();
 
                     b.HasIndex("OrganizationId");
 
@@ -110,6 +159,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Staffs.Staff", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedBy")
@@ -145,11 +195,19 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Positions.Position", b =>
                 {
+                    b.HasOne("Domain.Entities.GroupTitles.GroupTitle", "GroupTitle")
+                        .WithOne()
+                        .HasForeignKey("Domain.Entities.Positions.Position", "GroupTitleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Organizations.Organization", null)
                         .WithMany("Positions")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("GroupTitle");
                 });
 
             modelBuilder.Entity("Domain.Entities.StaffPositions.StaffPosition", b =>
@@ -160,11 +218,13 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Staffs.Staff", null)
+                    b.HasOne("Domain.Entities.Staffs.Staff", "Staff")
                         .WithMany()
                         .HasForeignKey("StaffId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Staff");
                 });
 
             modelBuilder.Entity("Domain.Entities.Organizations.Organization", b =>

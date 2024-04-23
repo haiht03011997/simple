@@ -22,15 +22,14 @@ public class UpdateOrganizationCommandHandler :
 
     public async Task Handle(UpdateOrganizationCommand command, CancellationToken cancellationToken)
     {
-        OrganizationId organizationId = new OrganizationId(command.OrganizationId);
-        Organization? organization = await _organizationRepository.GetByIdAsync(organizationId);
+        Organization? organization = await _organizationRepository.GetByIdAsync(command.OrganizationId);
 
         if (organization == null)
         {
             throw new NotFoundException($"Organization with ID {command.OrganizationId} not found.");
         }
 
-        organization.Update(command.Name);
+        organization.Update(command.Name, command.IsSameLegal, command.IsDeleted);
         await UpdatePosition(command, organization);
 
         await _organizationRepository.UpdateAsync(organization);
@@ -43,14 +42,19 @@ public class UpdateOrganizationCommandHandler :
             Position position;
             if (positionCommand.PositionId.HasValue)
             {
-                PositionId positionId = new PositionId(positionCommand.PositionId.Value);
-                var existingPosition = await _positionRepository.GetByIdAsync(positionId);
+                var existingPosition = await _positionRepository.GetByIdAsync(positionCommand.PositionId.Value);
                 if (existingPosition == null)
                 {
                     throw new NotFoundException($"Position with ID {positionCommand.PositionId} not found.");
                 }
-                existingPosition.UpdateDetails(positionCommand.Name, positionCommand.Description);
-                existingPosition.UpdateStaff(positionCommand.StaffIds?.Select(id => new StaffId(id)).ToList());
+                existingPosition.UpdateDetails(
+                    positionCommand.Name,
+                    positionCommand.Description,
+                    positionCommand.IsManage,
+                    positionCommand.GroupTitleId,
+                    positionCommand.IsDeleted);
+
+                existingPosition.UpdateStaff(positionCommand.StaffIds);
                 position = existingPosition;
             }
             else
@@ -58,7 +62,9 @@ public class UpdateOrganizationCommandHandler :
                 position = Position.Create(
                     positionCommand.Name,
                     positionCommand.Description,
-                    positionCommand.StaffIds?.Select(id => new StaffId(id)).ToList());
+                    positionCommand.IsManage,
+                    positionCommand.GroupTitleId,
+                    positionCommand.StaffIds);
             }
 
             organization.UpdatePosition(position);

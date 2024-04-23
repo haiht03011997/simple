@@ -9,7 +9,9 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Position> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasConversion(userId => userId.value, value => new PositionId(value));
+            builder.HasOne(x => x.GroupTitle)
+                .WithOne()
+                .IsRequired();
         }
     }
 }

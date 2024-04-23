@@ -13,7 +13,7 @@ namespace Infrastructure.Repository
             _context = context;
         }
 
-        public async Task<Organization?> GetByIdAsync(OrganizationId id)
+        public async Task<Organization?> GetByIdAsync(Guid id)
         {
             return await _context.Organizations.Include(x => x.Positions).ThenInclude(x => x.StaffPositions).ThenInclude(x => x.Staff)
                 .SingleOrDefaultAsync(u => u.Id == id);

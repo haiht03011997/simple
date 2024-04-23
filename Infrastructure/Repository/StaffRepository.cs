@@ -1,6 +1,4 @@
 ﻿using Application.Interfaces.Entities;
-using Domain.Entities.Organizations;
-using Domain.Entities.Positions;
 using Domain.Entities.Staffs;
 
 namespace Infrastructure.Repository

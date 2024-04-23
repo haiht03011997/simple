@@ -5,12 +5,12 @@ namespace Domain.Entities.StaffPositions
 {
     public class StaffPosition
     {
-        public PositionId PositionId { get; private set; }
+        public Guid PositionId { get; private set; }
 
-        public StaffId StaffId { get; private set; }
+        public Guid StaffId { get; private set; }
         public virtual Staff Staff { get; private set; }
         private StaffPosition() { }
-        public StaffPosition(PositionId positionId, StaffId staffId) {
+        public StaffPosition(Guid positionId, Guid staffId) {
             PositionId = positionId;
             StaffId = staffId;
         }
