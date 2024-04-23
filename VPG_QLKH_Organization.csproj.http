@@ -1,0 +1,6 @@
+@VPG_QLKH_Organization.csproj_HostAddress = http://localhost:5273
+
+GET {{VPG_QLKH_Organization.csproj_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,11 @@
+D:\VPG_QLKH_Organization.csproj\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\VPG_QLKH_Organization.csproj\Domain\bin\Debug\net8.0\Domain.dll
+D:\VPG_QLKH_Organization.csproj\Domain\bin\Debug\net8.0\Domain.pdb
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.dll
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\Domain.pdb
+D:\VPG_QLKH_Organization.csproj\Domain\obj\Debug\net8.0\ref\Domain.dll

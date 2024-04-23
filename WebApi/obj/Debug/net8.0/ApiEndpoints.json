@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.OrganizationController",
+    "Method": "Create",
+    "RelativePath": "Organization",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Commands.Organizations.Create.CreateOrganizationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.OrganizationController",
+    "Method": "Update",
+    "RelativePath": "Organization",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Commands.Organizations.Create.UpdateOrganizationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StaffController",
+    "Method": "Create",
+    "RelativePath": "Staffs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Contracts.Staffs.CreateStaffRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
