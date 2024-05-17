@@ -1,30 +1,29 @@
-﻿using Domain.Entities.GroupTitles;
-using Domain.Entities.StaffPositions;
+﻿using Domain.Entities.StaffPositions;
+using VPG_QLKH_Organization.Enums;
 
 namespace Domain.Entities.Positions
 {
     public class Position : BaseEntity<Guid>
     {
         private readonly List<StaffPosition> _staffPositions = new();
-        public string Name { get; private set; }
-        public bool? IsManage { get; private set; }
-        public string? Description { get; private set; }
-        public Guid GroupTitleId { get; private set; }
+        public PostType PostType { get; private set; }
+        public string PostName { get; private set; }
+        public bool? IsManager { get; private set; }
+        public bool? IsAccountable { get; private set; }
         public IReadOnlyList<StaffPosition> StaffPositions => _staffPositions;
-        public virtual  GroupTitle GroupTitle { get;}
         private Position() { }
-        private Position(string name, string? desciption, bool? isManage, Guid groupTitleId, List<StaffPosition>? staffPositions, Guid? positionId = null) : base(positionId ?? Guid.NewGuid())
+        private Position(string postName, PostType postType, bool? isManager, bool? isAccountable, List<StaffPosition>? staffPositions, Guid? positionId = null) : base(positionId ?? Guid.NewGuid())
         {
-            Name = name;
-            Description = desciption;
-            IsManage = isManage;
-            GroupTitleId = groupTitleId;
+            PostName = postName;
+            PostType = postType;
+            IsAccountable = isManager;
+            IsAccountable = isAccountable;
             _staffPositions = staffPositions;
         }
-        public static Position Create(string name, string? description, bool? isManage, Guid groupTitleId, List<Guid>? staffIds = null)
+        public static Position Create(string postName, PostType postType, bool? isManager, bool? isAccountable, List<Guid>? staffIds = null)
         {
             // Create a new position without any staff
-            var position = new Position(name, description, isManage, groupTitleId, new List<StaffPosition>());
+            var position = new Position(postName, postType, isManager, isAccountable, new List<StaffPosition>());
 
             // Add each staff member to the position
             if (staffIds is not null && staffIds.Any())
@@ -38,13 +37,12 @@ namespace Domain.Entities.Positions
             return position;
         }
 
-        public void UpdateDetails(string newName, string newDescription, bool? isManage, Guid groupTitleId, bool? isDeleted)
+        public void UpdateDetails(string postName, PostType postType, bool? isManager, bool? isAccountable)
         {
-            Name = newName;
-            Description = newDescription;
-            IsManage = isManage;
-            GroupTitleId = groupTitleId;
-            MarkDeleted(isDeleted);
+            PostName = postName;
+            PostType = postType;
+            IsManager = isManager;
+            IsAccountable = isAccountable;
         }
 
         public void UpdateStaff(List<Guid>? newStaffIds)

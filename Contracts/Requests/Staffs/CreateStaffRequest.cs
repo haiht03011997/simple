@@ -1,4 +1,4 @@
-﻿namespace Contracts.Staffs
+﻿namespace Contracts.Request.Staffs
 {
     public class CreateStaffRequest
     {

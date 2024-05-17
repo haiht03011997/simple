@@ -18,11 +18,12 @@ public class CreateOrganizationCommandHandler :
 
     public async Task Handle(CreateOrganizationCommand command, CancellationToken cancellationToken)
     {
-        Organization organization = Organization.Create(command.Name,
-                                                        command.ParentOrganizationId,
-                                                        command.IsSameLegal,
-                                                        positions: command.CreatePositionCommands?.ConvertAll(cpc =>
-                                                        Position.Create(cpc.Name, cpc.Description, cpc.IsManage, cpc.GroupTileId, cpc.StaffIds)));
+        Organization organization = Organization.Create(command.OrgName,
+                                                        command.ParentAdministrativeId,
+                                                        command.IsSameOrganization,
+                                                        command.PIC,
+                                                        positions: command.OrgPosts?.ConvertAll(cpc =>
+                                                        Position.Create(cpc.PostName, cpc.PostType, cpc.IsManager, cpc.IsAccountable, cpc.PersonIds)));
 
         await _organizationRepository.AddAsync(organization);
     }

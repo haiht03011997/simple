@@ -1,13 +1,13 @@
 ﻿using Application.Commands.Organizations.Create;
+using Application.Queries.Organizations;
 using AutoMapper;
-using Contracts.Organizations;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
-[Route("Organization")]
+[Route("api/[controller]")]
 [AllowAnonymous]
 public class OrganizationController : ControllerBase
 {
@@ -18,6 +18,25 @@ public class OrganizationController : ControllerBase
     {
         _mediator = mediator;
         _mapper = mapper;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetTree([FromQuery] GetTreeOrganizationQuery command)
+    {
+        //var command = _mapper.Map<CreateOrganizationCommand>(request);
+        var result = await _mediator.Send(command);
+
+        return Ok(result);
+    }
+
+    [HttpGet]
+    [Route("{id}")]
+    public async Task<IActionResult> GetById([FromRoute] GetByIdQuery command)
+    {
+        //var command = _mapper.Map<CreateOrganizationCommand>(request);
+        var result = await _mediator.Send(command);
+
+        return Ok(result);
     }
 
     [HttpPost]

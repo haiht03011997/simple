@@ -21,3 +21,15 @@ D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.dll
 D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\refint\Contracts.dll
 D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\Contracts.pdb
 D:\VPG_QLKH_Organization\Contracts\obj\Debug\net8.0\ref\Contracts.dll
+D:\simple\Contracts\bin\Debug\net8.0\Contracts.deps.json
+D:\simple\Contracts\bin\Debug\net8.0\Contracts.dll
+D:\simple\Contracts\bin\Debug\net8.0\Contracts.pdb
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfoInputs.cache
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.AssemblyInfo.cs
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.csproj.CoreCompileInputs.cache
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.sourcelink.json
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.dll
+D:\simple\Contracts\obj\Debug\net8.0\refint\Contracts.dll
+D:\simple\Contracts\obj\Debug\net8.0\Contracts.pdb
+D:\simple\Contracts\obj\Debug\net8.0\ref\Contracts.dll

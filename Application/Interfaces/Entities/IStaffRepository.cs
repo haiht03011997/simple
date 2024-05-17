@@ -5,5 +5,6 @@ namespace Application.Interfaces.Entities
     public interface IStaffRepository
     {
         Task AddAsync(Staff staff);
+        Task<List<Staff>> GetListAsync();
     }
 }

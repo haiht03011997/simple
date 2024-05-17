@@ -1,17 +1,18 @@
-using Domain.Entities.Staffs;
 using MediatR;
+using VPG_QLKH_Organization.Enums;
 
 namespace Application.Commands.Organizations.Create;
 
 public record CreateOrganizationCommand(
-    string Name,
-    Guid? ParentOrganizationId,
-    bool? IsSameLegal,
-    List<CreatePositionCommand>? CreatePositionCommands) : IRequest;
+    Guid? ParentAdministrativeId,
+    string OrgName,
+    bool? IsSameOrganization,
+    Guid? PIC,
+    List<UpdatePositionCommand> OrgPosts) : IRequest;
 
 public record CreatePositionCommand(
-    string? Name,
-    string? Description,
-    bool? IsManage,
-    Guid GroupTileId,
-    List<Guid>? StaffIds) : IRequest;
+    PostType PostType,
+    string PostName,
+    bool? IsManager,
+    bool? IsAccountable,
+    List<Guid>? PersonIds) : IRequest;

@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "WebApi.Controllers.OrganizationController",
+    "Method": "GetTree",
+    "RelativePath": "api/Organization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Queries.Organizations.GetTreeOrganizationQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.OrganizationController",
     "Method": "Create",
-    "RelativePath": "Organization",
+    "RelativePath": "api/Organization",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +34,7 @@
   {
     "ContainingType": "WebApi.Controllers.OrganizationController",
     "Method": "Update",
-    "RelativePath": "Organization",
+    "RelativePath": "api/Organization",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -32,16 +48,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.OrganizationController",
+    "Method": "GetById",
+    "RelativePath": "api/Organization/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PostTypeController",
+    "Method": "GetTree",
+    "RelativePath": "api/PostType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "Application.Queries.Organizations.GetListPostTypeQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.StaffController",
+    "Method": "GetList",
+    "RelativePath": "api/Staff",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.Queries.Organizations.GetListStaffQuery",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.StaffController",
     "Method": "Create",
-    "RelativePath": "Staffs",
+    "RelativePath": "api/Staff",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Contracts.Staffs.CreateStaffRequest",
+        "Type": "Contracts.Request.Staffs.CreateStaffRequest",
         "IsRequired": true
       }
     ],

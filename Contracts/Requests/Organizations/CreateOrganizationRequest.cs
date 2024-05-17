@@ -1,4 +1,4 @@
-﻿namespace Contracts.Organizations
+﻿namespace Contracts.Request.Organizations
 {
     public class CreateOrganizationRequest
     {

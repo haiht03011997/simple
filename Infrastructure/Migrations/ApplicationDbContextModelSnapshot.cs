@@ -22,45 +22,12 @@ namespace Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.GroupTitles.GroupTitle", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("GroupTitles");
-                });
-
             modelBuilder.Entity("Domain.Entities.Organizations.Organization", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("Category")
-                        .HasColumnType("int");
-
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -70,7 +37,7 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsSameLegal")
+                    b.Property<bool?>("IsSameOrganization")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastUpdatedBy")
@@ -83,7 +50,10 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ParentId")
+                    b.Property<Guid?>("PIC")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ParentAdministrativeId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -103,16 +73,13 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("GroupTitleId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<bool?>("IsAccountable")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsManage")
+                    b.Property<bool?>("IsManager")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastUpdatedBy")
@@ -121,17 +88,17 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("LastUpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("OrganizationId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
+                    b.Property<string>("PostName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("GroupTitleId")
-                        .IsUnique();
+                    b.Property<int>("PostType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("OrganizationId");
 
@@ -192,19 +159,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Positions.Position", b =>
                 {
-                    b.HasOne("Domain.Entities.GroupTitles.GroupTitle", "GroupTitle")
-                        .WithOne()
-                        .HasForeignKey("Domain.Entities.Positions.Position", "GroupTitleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Entities.Organizations.Organization", null)
                         .WithMany("Positions")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("GroupTitle");
                 });
 
             modelBuilder.Entity("Domain.Entities.StaffPositions.StaffPosition", b =>

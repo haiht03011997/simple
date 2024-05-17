@@ -1677,6 +1677,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "AutoMapper": "13.0.1",
+          "Contracts": "1.0.0",
           "Domain": "1.0.0",
           "FluentValidation.DependencyInjectionExtensions": "11.9.0",
           "MediatR": "12.2.0",
@@ -4760,11 +4762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "D:\\simple\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj",
+      "projectPath": "D:\\simple\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-      "outputPath": "D:\\VPG_QLKH_Organization\\WebApi\\obj\\",
+      "outputPath": "D:\\simple\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4785,11 +4787,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj"
+            "D:\\simple\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
             },
-            "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj"
+            "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

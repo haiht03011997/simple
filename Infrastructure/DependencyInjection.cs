@@ -22,10 +22,12 @@ namespace Infrastructure
                 options
                     .UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IReadOnlyGenericRepository<,>), typeof(ReadOnlyGenericRepository<,>));
+            services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
             services.AddScoped<IOrganizationRepository, OrganizationRepository>();
             services.AddScoped<IPositionRepository, PositionRepository>();
             services.AddScoped<IStaffRepository, StaffRepository>();
-            services.AddScoped<IGroupTitleRepository, GroupTitleRepository>();
 
             return services;
         }

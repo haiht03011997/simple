@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KjMvQ9K/JrMnfP2rEyhmZiQgrWow9JzcyGt6xk7JDJbm3k/DNPG/ecDifmk2ilhNUFH9XGtvQ/HQc0ngqq9MCg==",
+  "dgSpecHash": "4ofXIK3ECuk1NrWCRGXrouiX9hnUPn0gqkKrhquK1iJcswJjL9uvDn9P5muIQFoIXSdD0iGE3GA9Sg0cyYO0HQ==",
   "success": true,
-  "projectFilePath": "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\simple\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8rfXOFWXyb84MSdb4yUc3e4K3cIT16BPGPUX0j8al6lp593cDEf3LLCZpMfHwzt59IFFkfuJAFwisBbEZRCMpw==",
+  "dgSpecHash": "zDtc80C7seerTdOuxjUQUXyU9t7wXt3hyI/UuDus9hTyncFVMMX1CjI0YW3RDcljsU5tX/TJ975kLixoGk+DgQ==",
   "success": true,
-  "projectFilePath": "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HELLO\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",

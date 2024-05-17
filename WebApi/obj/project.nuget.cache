@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xxjip5WbiRXFUm7TRsivLGZEiJntOWU52nfpVcnXhQMEtLef8V5n4N0AyTNIq5VLfgEYprUb565RoKicpv5OGw==",
+  "dgSpecHash": "xt4RjyWufN6h4+eUgk0EcV1EbxB0pFg3SIzSruQIGd55SMonnhkRMHRpEoAbWol9HwGl4pkE76tupNgkWTFs6g==",
   "success": true,
-  "projectFilePath": "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj",
+  "projectFilePath": "D:\\simple\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HELLO\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

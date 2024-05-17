@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E1YQMN3Zv4u5wFPri0/lBpKG9RnP1st9PujVKUcoMGBBvXhvtbAakSKuHU7hGkDg3PItlAmwJ0lCqB+hSBOD+Q==",
+  "dgSpecHash": "5L3rtYtC75OV4cr+io5Q+jC0ukDxBlpIszGRYSnn8PAIyWf3WUjZvmyuX/NcSlkhr15oxsQgWIbHeUUBt+cLDw==",
   "success": true,
-  "projectFilePath": "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj",
+  "projectFilePath": "D:\\simple\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

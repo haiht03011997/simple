@@ -1,6 +1,5 @@
 ﻿using Application.Interfaces.Data;
 using Domain.Entities;
-using Domain.Entities.GroupTitles;
 using Domain.Entities.Organizations;
 using Domain.Entities.Positions;
 using Domain.Entities.StaffPositions;
@@ -21,7 +20,6 @@ namespace Infrastructure
         public DbSet<Staff> Staffs { get; set; } = null!;
         public DbSet<Position> Positions { get; set; } = null!;
         public DbSet<StaffPosition> StaffPositions { get; set; } = null!;
-        public DbSet<GroupTitle> GroupTitles { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,20 +1,21 @@
 using MediatR;
+using VPG_QLKH_Organization.Enums;
 
 namespace Application.Commands.Organizations.Create;
 
 public record UpdateOrganizationCommand(
-    Guid OrganizationId,
-    Guid ParentOrganizationId,
-    string Name,
-    bool? IsSameLegal,
-    List<UpdatePositionCommand> CreatePositionCommands,
-    bool? IsDeleted) : IRequest;
+    Guid Id,
+    Guid? ParentAdministrativeId,
+    string OrgName,
+    bool? IsSameOrganization,
+    Guid? PIC,
+    List<UpdatePositionCommand> OrgPosts) : IRequest;
 
 public record UpdatePositionCommand(
-    Guid? PositionId,
-    string Name,
-    string Description,
-    bool? IsManage,
-    Guid GroupTitleId,
-    List<Guid> StaffIds,
+    Guid? Id,
+    PostType PostType,
+    string PostName,
+    bool? IsManager,
+    bool? IsAccountable,
+    List<Guid> PersonIds,
     bool? IsDeleted) : IRequest;

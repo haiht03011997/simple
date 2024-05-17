@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj": {}
+    "D:\\simple\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\VPG_QLKH_Organization\\Application\\Application.csproj": {
+    "D:\\simple\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VPG_QLKH_Organization\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\simple\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\VPG_QLKH_Organization\\Application\\Application.csproj",
+        "projectPath": "D:\\simple\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\VPG_QLKH_Organization\\Application\\obj\\",
+        "outputPath": "D:\\simple\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj"
+              "D:\\simple\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
+              },
+              "D:\\simple\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\simple\\Domain\\Domain.csproj"
               }
             }
           }
@@ -53,6 +56,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.9.0, )"
@@ -86,14 +93,14 @@
         }
       }
     },
-    "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj": {
+    "D:\\simple\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\simple\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\simple\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\VPG_QLKH_Organization\\Contracts\\obj\\",
+        "outputPath": "D:\\simple\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -150,14 +157,14 @@
         }
       }
     },
-    "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj": {
+    "D:\\simple\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\simple\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\VPG_QLKH_Organization\\Domain\\Domain.csproj",
+        "projectPath": "D:\\simple\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\VPG_QLKH_Organization\\Domain\\obj\\",
+        "outputPath": "D:\\simple\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -214,14 +221,14 @@
         }
       }
     },
-    "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\VPG_QLKH_Organization\\Infrastructure\\obj\\",
+        "outputPath": "D:\\simple\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -242,8 +249,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\VPG_QLKH_Organization\\Application\\Application.csproj": {
-                "projectPath": "D:\\VPG_QLKH_Organization\\Application\\Application.csproj"
+              "D:\\simple\\Application\\Application.csproj": {
+                "projectPath": "D:\\simple\\Application\\Application.csproj"
               }
             }
           }
@@ -302,14 +309,14 @@
         }
       }
     },
-    "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj": {
+    "D:\\simple\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\simple\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\VPG_QLKH_Organization\\WebApi\\WebApi.csproj",
+        "projectPath": "D:\\simple\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\VPG_QLKH_Organization\\WebApi\\obj\\",
+        "outputPath": "D:\\simple\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -330,11 +337,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\VPG_QLKH_Organization\\Contracts\\Contracts.csproj"
+              "D:\\simple\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
               },
-              "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\VPG_QLKH_Organization\\Infrastructure\\Infrastructure.csproj"
+              "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

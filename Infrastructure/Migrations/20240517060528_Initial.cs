@@ -12,31 +12,14 @@ namespace Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "GroupTitles",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GroupTitles", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Organizations",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParentId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Category = table.Column<int>(type: "int", nullable: false),
-                    IsSameLegal = table.Column<bool>(type: "bit", nullable: true),
+                    ParentAdministrativeId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    IsSameOrganization = table.Column<bool>(type: "bit", nullable: true),
+                    PIC = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LastUpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -71,10 +54,10 @@ namespace Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsManage = table.Column<bool>(type: "bit", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroupTitleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PostType = table.Column<int>(type: "int", nullable: false),
+                    PostName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsManager = table.Column<bool>(type: "bit", nullable: true),
+                    IsAccountable = table.Column<bool>(type: "bit", nullable: true),
                     OrganizationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -85,12 +68,6 @@ namespace Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Positions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Positions_GroupTitles_GroupTitleId",
-                        column: x => x.GroupTitleId,
-                        principalTable: "GroupTitles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Positions_Organizations_OrganizationId",
                         column: x => x.OrganizationId,
@@ -124,12 +101,6 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Positions_GroupTitleId",
-                table: "Positions",
-                column: "GroupTitleId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Positions_OrganizationId",
                 table: "Positions",
                 column: "OrganizationId");
@@ -157,9 +128,6 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Staffs");
-
-            migrationBuilder.DropTable(
-                name: "GroupTitles");
 
             migrationBuilder.DropTable(
                 name: "Organizations");

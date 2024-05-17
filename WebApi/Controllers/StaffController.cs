@@ -1,13 +1,14 @@
 ﻿using Application.Commands.Staffs.Create;
+using Application.Queries.Organizations;
 using AutoMapper;
-using Contracts.Staffs;
+using Contracts.Request.Staffs;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
-[Route("Staffs")]
+[Route("api/[controller]")]
 [AllowAnonymous]
 public class StaffController : ControllerBase
 {
@@ -18,6 +19,14 @@ public class StaffController : ControllerBase
     {
         _mediator = mediator;
         _mapper = mapper;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetList([FromQuery] GetListStaffQuery request)
+    {
+        var result = await _mediator.Send(request);
+
+        return Ok(result);
     }
 
     [HttpPost]

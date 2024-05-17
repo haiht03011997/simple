@@ -9,9 +9,6 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Position> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.HasOne(x => x.GroupTitle)
-                .WithOne()
-                .IsRequired();
         }
     }
 }

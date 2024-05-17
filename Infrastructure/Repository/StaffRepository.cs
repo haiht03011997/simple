@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces.Entities;
 using Domain.Entities.Staffs;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
@@ -16,6 +17,11 @@ namespace Infrastructure.Repository
         {
             await _context.Staffs.AddAsync(staff);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Staff>> GetListAsync()
+        {
+            return await _context.Staffs.Where(x => !x.IsDeleted).ToListAsync();
         }
     }
 }

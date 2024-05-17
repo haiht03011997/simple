@@ -22,52 +22,58 @@ public class UpdateOrganizationCommandHandler :
 
     public async Task Handle(UpdateOrganizationCommand command, CancellationToken cancellationToken)
     {
-        Organization? organization = await _organizationRepository.GetByIdAsync(command.OrganizationId);
+        Organization? organization = await _organizationRepository.GetByIdAsync(command.Id);
 
         if (organization == null)
         {
-            throw new NotFoundException($"Organization with ID {command.OrganizationId} not found.");
+            throw new NotFoundException($"Organization with ID {command.Id} not found.");
         }
 
-        organization.Update(command.Name, command.IsSameLegal, command.IsDeleted);
+        organization.Update(command.OrgName, command.IsSameOrganization);
         await UpdatePosition(command, organization);
 
-        await _organizationRepository.UpdateAsync(organization);
+        await _organizationRepository.CreateOrUpdateAsync(organization);
     }
 
     private async Task UpdatePosition(UpdateOrganizationCommand command, Organization organization)
     {
-        foreach (var positionCommand in command.CreatePositionCommands)
+        foreach (var positionCommand in command.OrgPosts)
         {
             Position position;
-            if (positionCommand.PositionId.HasValue)
-            {
-                var existingPosition = await _positionRepository.GetByIdAsync(positionCommand.PositionId.Value);
-                if (existingPosition == null)
-                {
-                    throw new NotFoundException($"Position with ID {positionCommand.PositionId} not found.");
-                }
-                existingPosition.UpdateDetails(
-                    positionCommand.Name,
-                    positionCommand.Description,
-                    positionCommand.IsManage,
-                    positionCommand.GroupTitleId,
-                    positionCommand.IsDeleted);
-
-                existingPosition.UpdateStaff(positionCommand.StaffIds);
-                position = existingPosition;
-            }
-            else
+            if (!positionCommand.Id.HasValue)
             {
                 position = Position.Create(
-                    positionCommand.Name,
-                    positionCommand.Description,
-                    positionCommand.IsManage,
-                    positionCommand.GroupTitleId,
-                    positionCommand.StaffIds);
-            }
+                    positionCommand.PostName,
+                    positionCommand.PostType,
+                    positionCommand.IsManager,
+                    positionCommand.IsAccountable,
+                    positionCommand.PersonIds);
+                organization.UpdatePosition(position);
+                //var existingPosition = await _positionRepository.GetByIdAsync(positionCommand.Id.Value);
+                //if (existingPosition == null)
+                //{
+                //    throw new NotFoundException($"Position with ID {positionCommand.Id} not found.");
+                //}
+                //existingPosition.UpdateDetails(
+                //    positionCommand.PostName,
+                //    positionCommand.PostType,
+                //    positionCommand.IsManager,
+                //    positionCommand.IsAccountable);
 
-            organization.UpdatePosition(position);
+                //existingPosition.UpdateStaff(positionCommand.PersonIds);
+                //position = existingPosition;
+            }
+            //else
+            //{
+            //    position = Position.Create(
+            //        positionCommand.PostName,
+            //        positionCommand.PostType,
+            //        positionCommand.IsManager,
+            //        positionCommand.IsAccountable,
+            //        positionCommand.PersonIds);
+            //organization.UpdatePosition(position);
+            //}
+
         }
     }
 }

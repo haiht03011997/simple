@@ -8,35 +8,36 @@ namespace Domain.Entities.Organizations
     {
         private readonly List<Position> _positions = new();
         public string Name { get; private set; }
-        public Guid? ParentId { get; private set; }
-        public CategoryOrganization Category { get; private set; }
-        public bool? IsSameLegal { get; private set; }
+        public Guid? ParentAdministrativeId { get; private set; }
+        public bool? IsSameOrganization { get; private set; }
+        public Guid? PIC { get; private set; }
         public IReadOnlyList<Position> Positions => _positions.AsReadOnly();
         private Organization()
         {
         }
-        private Organization(string name, Guid? parentId, bool? isSameLegal, List<Position>? positions, Guid? organizationId = null) : base(organizationId ?? Guid.NewGuid())
+        private Organization(string name, Guid? parentAdministrativeId, bool? isSameOrganization,Guid? pIC, List<Position>? positions, Guid? organizationId = null) : base(organizationId ?? Guid.NewGuid())
         {
             Name = name;
-            ParentId = parentId;
-            IsSameLegal = isSameLegal;
+            ParentAdministrativeId = parentAdministrativeId;
+            IsSameOrganization = isSameOrganization;
+            PIC = pIC;
             _positions = positions;
         }
 
-        public static Organization Create(string name, Guid? parentId, bool? isSameLegal, List<Position>? positions = null)
+        public static Organization Create(string name, Guid? parentId, bool? isSameOrganization,Guid? pIC, List<Position>? positions = null)
         {
             // TODO: enforce invariants
             return new Organization(
                 name,
                 parentId,
-                isSameLegal,
+                isSameOrganization,
+                pIC,
                 positions);
         }
-        public void Update(string name, bool? isSameLegal, bool? isDeleted = false , List<Position>? updatedPositions = null)
+        public void Update(string name, bool? isSameOrganization)
         {
             Name = name;
-            IsSameLegal = isSameLegal;
-            MarkDeleted(isDeleted);
+            IsSameOrganization = isSameOrganization;
         }
 
         public void UpdatePosition(Position updatedPosition)
@@ -45,7 +46,7 @@ namespace Domain.Entities.Organizations
             if (existingPosition != null)
             {
                 // Update existing position
-                existingPosition.UpdateDetails(updatedPosition.Name, updatedPosition.Description, updatedPosition.IsManage, updatedPosition.GroupTitleId, updatedPosition.IsDeleted);
+                existingPosition.UpdateDetails(updatedPosition.PostName, updatedPosition.PostType, updatedPosition.IsManager, updatedPosition.IsAccountable);
                 existingPosition.UpdateStaff(updatedPosition.StaffPositions.Select(sp => sp.StaffId).ToList());
             }
             else
