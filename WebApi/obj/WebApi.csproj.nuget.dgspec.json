@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\simple\\WebApi\\WebApi.csproj": {}
+    "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\simple\\Application\\Application.csproj": {
+    "D:\\Dự Án\\simple\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\simple\\Application\\Application.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\Application\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\simple\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
+              "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj"
               },
-              "D:\\simple\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\simple\\Domain\\Domain.csproj"
+              "D:\\Dự Án\\simple\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Dự Án\\simple\\Domain\\Domain.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "D:\\simple\\Contracts\\Contracts.csproj": {
+    "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\simple\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\Contracts\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -157,14 +157,14 @@
         }
       }
     },
-    "D:\\simple\\Domain\\Domain.csproj": {
+    "D:\\Dự Án\\simple\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\simple\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\Domain\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -221,14 +221,14 @@
         }
       }
     },
-    "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -249,8 +249,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\simple\\Application\\Application.csproj": {
-                "projectPath": "D:\\simple\\Application\\Application.csproj"
+              "D:\\Dự Án\\simple\\Application\\Application.csproj": {
+                "projectPath": "D:\\Dự Án\\simple\\Application\\Application.csproj"
               }
             }
           }
@@ -309,14 +309,14 @@
         }
       }
     },
-    "D:\\simple\\WebApi\\WebApi.csproj": {
+    "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\simple\\WebApi\\WebApi.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\WebApi\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -337,11 +337,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\simple\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
+              "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj"
               },
-              "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj"
+              "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

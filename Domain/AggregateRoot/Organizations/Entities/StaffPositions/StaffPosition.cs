@@ -1,7 +1,6 @@
-﻿using Domain.Entities.Positions;
-using Domain.Entities.Staffs;
+﻿using Domain.Entities.Staffs;
 
-namespace Domain.Entities.StaffPositions
+namespace Domain.AggregateRoot.Organizations.Entities.StaffPositions
 {
     public class StaffPosition
     {
@@ -10,7 +9,8 @@ namespace Domain.Entities.StaffPositions
         public Guid StaffId { get; private set; }
         public virtual Staff Staff { get; private set; }
         private StaffPosition() { }
-        public StaffPosition(Guid positionId, Guid staffId) {
+        public StaffPosition(Guid positionId, Guid staffId)
+        {
             PositionId = positionId;
             StaffId = staffId;
         }

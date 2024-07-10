@@ -1,5 +1,4 @@
-﻿
-namespace Domain.Entities.Staffs
+﻿namespace Domain.Entities.Staffs
 {
     public class Staff : BaseEntity<Guid>
     {

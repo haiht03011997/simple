@@ -1,7 +1,7 @@
 using Application.Exceptions;
 using Application.Interfaces.Entities;
+using Domain.AggregateRoot.Organizations.Entities.Positions;
 using Domain.Entities.Organizations;
-using Domain.Entities.Positions;
 using Domain.Entities.Staffs;
 using MediatR;
 

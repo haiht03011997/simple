@@ -1,7 +1,7 @@
-﻿using Domain.Entities.StaffPositions;
+﻿using Domain.AggregateRoot.Organizations.Entities.StaffPositions;
 using VPG_QLKH_Organization.Enums;
 
-namespace Domain.Entities.Positions
+namespace Domain.AggregateRoot.Organizations.Entities.Positions
 {
     public class Position : BaseEntity<Guid>
     {
@@ -60,7 +60,7 @@ namespace Domain.Entities.Positions
 
         private void AddStaff(Guid staffId)
         {
-            var staffPosition = new StaffPosition(this.Id, staffId);
+            var staffPosition = new StaffPosition(Id, staffId);
             _staffPositions.Add(staffPosition);
         }
     }

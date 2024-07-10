@@ -1,10 +1,9 @@
-﻿
-using Domain.Entities.Positions;
+﻿using Domain.AggregateRoot.Organizations.Entities.Positions;
 using Domain.Enumerations;
 
 namespace Domain.Entities.Organizations
 {
-    public sealed class Organization : BaseEntity<Guid>
+    public sealed class Organization : BaseAggregateRoot<Guid>
     {
         private readonly List<Position> _positions = new();
         public string Name { get; private set; }

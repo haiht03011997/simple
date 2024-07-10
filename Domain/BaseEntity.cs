@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace Domain
 {
     public abstract class BaseEntity<TKey> : AuditedEntityBase
     {

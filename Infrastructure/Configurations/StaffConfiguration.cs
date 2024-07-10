@@ -9,6 +9,7 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Staff> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasQueryFilter(x => !x.IsDeleted);
             builder.HasIndex(x => x.Email).IsUnique();
         }
     }

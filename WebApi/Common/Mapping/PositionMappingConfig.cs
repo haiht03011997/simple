@@ -2,8 +2,8 @@ using Application.Commands.Organizations.Create;
 using AutoMapper;
 using Contracts.Request.Organizations;
 using Contracts.Responses.Organization;
+using Domain.AggregateRoot.Organizations.Entities.Positions;
 using Domain.Entities.Organizations;
-using Domain.Entities.Positions;
 
 namespace WebApi.Common.Mapping;
 

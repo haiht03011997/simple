@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "71TULEaEpdGU3mHJptnJCSFTo1rj4yR07Ot7VpjsL2bcLWYVb8xYSNEVRYYHwB7dH05Gy21KeqdAkMZTPMomxQ==",
+  "dgSpecHash": "lek03uY9mkBTyqrCkRpqsOInJXyxKYeEWiXB9VTwdjP92uyq6wFB8FmT61yCnWHkqMq1C2NJ5zHTawwxH8TfOA==",
   "success": true,
-  "projectFilePath": "D:\\simple\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Dự Án\\simple\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HELLO\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",

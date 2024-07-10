@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 using Application.Interfaces.Entities;
-using Domain.Entities;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository;

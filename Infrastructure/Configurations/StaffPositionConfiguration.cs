@@ -1,5 +1,5 @@
-﻿using Domain.Entities.Positions;
-using Domain.Entities.StaffPositions;
+﻿using Domain.AggregateRoot.Organizations.Entities.Positions;
+using Domain.AggregateRoot.Organizations.Entities.StaffPositions;
 using Domain.Entities.Staffs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

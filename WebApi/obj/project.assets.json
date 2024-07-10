@@ -4762,11 +4762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\simple\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "D:\\simple\\WebApi\\WebApi.csproj",
+      "projectPath": "D:\\Dự Án\\simple\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-      "outputPath": "D:\\simple\\WebApi\\obj\\",
+      "outputPath": "D:\\Dự Án\\simple\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4787,11 +4787,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\simple\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\simple\\Contracts\\Contracts.csproj"
+            "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj"
             },
-            "D:\\simple\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj"
+            "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

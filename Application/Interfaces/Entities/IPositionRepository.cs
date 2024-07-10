@@ -1,4 +1,4 @@
-using Domain.Entities.Positions;
+using Domain.AggregateRoot.Organizations.Entities.Positions;
 
 namespace Application.Interfaces.Entities;
 

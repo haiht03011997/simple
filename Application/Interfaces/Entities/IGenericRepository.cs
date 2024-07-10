@@ -1,5 +1,5 @@
 using System.Linq.Expressions;
-using Domain.Entities;
+using Domain;
 
 namespace Application.Interfaces.Entities;
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5L3rtYtC75OV4cr+io5Q+jC0ukDxBlpIszGRYSnn8PAIyWf3WUjZvmyuX/NcSlkhr15oxsQgWIbHeUUBt+cLDw==",
+  "dgSpecHash": "X5O8reITuKU/I4SUwUPili8KQnCoXrJ3ISVtNna+BYIS3rKMzgW72O56cSM6uJFJ3sEuY7NQIrFkAjdr4twknQ==",
   "success": true,
-  "projectFilePath": "D:\\simple\\Contracts\\Contracts.csproj",
+  "projectFilePath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

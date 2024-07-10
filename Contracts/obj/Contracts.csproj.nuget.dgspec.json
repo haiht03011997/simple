@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\simple\\Contracts\\Contracts.csproj": {}
+    "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {}
   },
   "projects": {
-    "D:\\simple\\Contracts\\Contracts.csproj": {
+    "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\simple\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\simple\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\Dự Án\\simple\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "D:\\simple\\Contracts\\obj\\",
+        "outputPath": "D:\\Dự Án\\simple\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

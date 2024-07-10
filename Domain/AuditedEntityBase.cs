@@ -1,5 +1,4 @@
-
-namespace Domain.Entities;
+namespace Domain;
 
 public abstract class AuditedEntityBase
 {
@@ -12,7 +11,7 @@ public abstract class AuditedEntityBase
     {
     }
 
-    protected AuditedEntityBase(string createdBy, DateTime? createdDate, string lastUpdatedBy , DateTime? lastUpdatedDate)
+    protected AuditedEntityBase(string createdBy, DateTime? createdDate, string lastUpdatedBy, DateTime? lastUpdatedDate)
     {
         CreatedBy = createdBy;
         CreatedDate = createdDate;

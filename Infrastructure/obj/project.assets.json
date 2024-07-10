@@ -4330,11 +4330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\simple\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "D:\\Dự Án\\simple\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-      "outputPath": "D:\\simple\\Infrastructure\\obj\\",
+      "outputPath": "D:\\Dự Án\\simple\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4355,8 +4355,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\simple\\Application\\Application.csproj": {
-              "projectPath": "D:\\simple\\Application\\Application.csproj"
+            "D:\\Dự Án\\simple\\Application\\Application.csproj": {
+              "projectPath": "D:\\Dự Án\\simple\\Application\\Application.csproj"
             }
           }
         }

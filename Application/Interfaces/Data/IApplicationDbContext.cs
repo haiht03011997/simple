@@ -1,6 +1,6 @@
-﻿using Domain.Entities.Organizations;
-using Domain.Entities.Positions;
-using Domain.Entities.StaffPositions;
+﻿using Domain.AggregateRoot.Organizations.Entities.Positions;
+using Domain.AggregateRoot.Organizations.Entities.StaffPositions;
+using Domain.Entities.Organizations;
 using Domain.Entities.Staffs;
 using Microsoft.EntityFrameworkCore;
 

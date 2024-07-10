@@ -9,6 +9,7 @@ namespace Infrastructure.Configurations
         public void Configure(EntityTypeBuilder<Organization> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasQueryFilter(x => !x.IsDeleted);
             builder.HasMany(x => x.Positions)
                 .WithOne()
                 .IsRequired();
